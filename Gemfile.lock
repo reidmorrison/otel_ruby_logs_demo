@@ -70,7 +70,7 @@ GIT
 
 GIT
   remote: https://github.com/kaylareopelle/opentelemetry-ruby-contrib
-  revision: b0da0f1fabf28cf68e528602b5c462157523de7c
+  revision: 18a45d1c3122a95ec1836821ff765a39afc8ff01
   branch: logger-instrumentation
   glob: instrumentation/all/*.gemspec
   specs:
@@ -112,13 +112,21 @@ GIT
 
 GIT
   remote: https://github.com/kaylareopelle/opentelemetry-ruby-contrib
-  revision: b0da0f1fabf28cf68e528602b5c462157523de7c
+  revision: 18a45d1c3122a95ec1836821ff765a39afc8ff01
   branch: logger-instrumentation
   glob: instrumentation/logger/*.gemspec
   specs:
     opentelemetry-instrumentation-logger (0.0.0)
       opentelemetry-api (~> 1.2)
       opentelemetry-instrumentation-base (~> 0.22)
+
+GIT
+  remote: https://github.com/reidmorrison/semantic_logger
+  revision: ca105940dd1ead9a6d49596fe3aa8ce5da84f84d
+  branch: open_telemetry
+  specs:
+    semantic_logger (4.16.0)
+      concurrent-ruby (~> 1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -188,6 +196,7 @@ GEM
       i18n (>= 1.6, < 2)
       minitest (>= 5.1)
       tzinfo (~> 2.0)
+    awesome_print (1.9.2)
     builder (3.3.0)
     concurrent-ruby (1.3.3)
     crass (1.0.6)
@@ -265,7 +274,7 @@ GEM
       opentelemetry-api (~> 1.0)
       opentelemetry-instrumentation-active_support (~> 0.1)
       opentelemetry-instrumentation-base (~> 0.22.1)
-    opentelemetry-instrumentation-active_job (0.7.2)
+    opentelemetry-instrumentation-active_job (0.7.3)
       opentelemetry-api (~> 1.0)
       opentelemetry-instrumentation-base (~> 0.22.1)
     opentelemetry-instrumentation-active_model_serializers (0.20.1)
@@ -425,6 +434,10 @@ GEM
     rails-html-sanitizer (1.6.0)
       loofah (~> 2.21)
       nokogiri (~> 1.14)
+    rails_semantic_logger (4.17.0)
+      rack
+      railties (>= 5.1)
+      semantic_logger (~> 4.16)
     railties (7.0.8.4)
       actionpack (= 7.0.8.4)
       activesupport (= 7.0.8.4)
@@ -462,6 +475,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  awesome_print
   debug
   minitest
   opentelemetry-api!
@@ -476,11 +490,10 @@ DEPENDENCIES
   puma (~> 6.4)
   rack-test
   rails (~> 7.0.8)
+  rails_semantic_logger
+  semantic_logger!
   sqlite3 (~> 1.4)
   tzinfo-data
 
-RUBY VERSION
-   ruby 3.2.2p53
-
 BUNDLED WITH
-   2.5.5
+   2.5.16
