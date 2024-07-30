@@ -70,6 +70,6 @@ gem 'opentelemetry-instrumentation-logger',
   branch: 'logger-instrumentation',
   glob: 'instrumentation/logger/*.gemspec'
 
-gem 'awesome_print'
+gem 'amazing_print'
 gem 'semantic_logger', git: 'https://github.com/reidmorrison/semantic_logger', branch: 'open_telemetry'
 gem 'rails_semantic_logger'
