@@ -24,3 +24,5 @@ OpenTelemetry::SDK.configure do |c|
 end
 
 APP_LOGGER = OpenTelemetry.logger_provider.logger(name: 'APP_LOGGER')
+
+SemanticLogger.add_appender(appender: :open_telemetry)

@@ -1,8 +1,6 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.2.2"
-
 gem "rails", "~> 7.0.8"
 
 # Use sqlite3 as the database for Active Record
@@ -71,3 +69,7 @@ gem 'opentelemetry-instrumentation-logger',
   git: 'https://github.com/kaylareopelle/opentelemetry-ruby-contrib',
   branch: 'logger-instrumentation',
   glob: 'instrumentation/logger/*.gemspec'
+
+gem 'amazing_print'
+gem 'semantic_logger', git: 'https://github.com/reidmorrison/semantic_logger', branch: 'open_telemetry'
+gem 'rails_semantic_logger'
